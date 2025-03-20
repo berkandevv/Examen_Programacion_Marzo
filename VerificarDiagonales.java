@@ -17,17 +17,15 @@ public class VerificarDiagonales {
         int columnas = matriz[0].length;
 
         // Verificar si todos los elementos de la primera columna son iguales
-        int primerElementoColumna = matriz[0][0];
         for (int i = 1; i < filas; i++) {
-            if (matriz[i][0] != primerElementoColumna) {
+            if (matriz[i][0] != matriz[0][0]) {
                 return false;
             }
         }
 
         // Verificar si todos los elementos de la última fila son iguales
-        int primerElementoFila = matriz[filas - 1][0];
         for (int j = 1; j < columnas; j++) {
-            if (matriz[filas - 1][j] != primerElementoFila) {
+            if (matriz[filas - 1][j] != matriz[filas - 1][0]) {
                 return false;
             }
         }
